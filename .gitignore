@@ -1,0 +1,7 @@
+*.exe
+course_progress_manager
+*.o
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
