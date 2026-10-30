@@ -6,6 +6,7 @@
 #include <string>
 #include <algorithm>
 #include <limits>
+#include <cstddef>
 #include <cmath>
 
 using namespace std;
@@ -256,7 +257,7 @@ void generateAnalytics() {
 
     cout << "Top Students:\n";
 
-    for (int i = 0; i < vec.size() && i < 3; i++) {
+    for (std::size_t i = 0; i < vec.size() && i < 3U; ++i) {
         int sid = vec[i].first;
         float prog = vec[i].second;
 
