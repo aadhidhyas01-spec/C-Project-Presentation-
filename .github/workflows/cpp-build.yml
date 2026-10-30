@@ -1,0 +1,19 @@
+name: Build C++ course manager
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Compile with warnings
+        run: g++ -std=c++17 -Wall -Wextra -pedantic -Werror course_progress_manager.cpp -o course_progress_manager
